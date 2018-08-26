@@ -1,0 +1,225 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(../img/timg.jpg);
+	background-size: 100%;
+	/*如果是cover的话有滚动条出现的时候，背景图片也会变大   100%的话就不会*/
+}
+
+h1 {
+	text-align: center;
+	color: lightpink;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+.container {
+	width: 800px;
+	height: 500px;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+.task-list {
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.task-item {
+	margin-top: 4px;
+	border: 1px solid black;
+	background: white;
+	box-shadow: 1px 2px 1px 2px lightslategrey;
+	cursor: pointer;
+	transition: background .2s;
+}
+
+input,
+.task-item {
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.task-item:hover {
+	background: #ddd;
+}
+
+input[type=text],
+input[type=date] {
+	border: 0;
+	width: 80%;
+	box-shadow: inset 1px 2px 2px gray;
+}
+
+input[type=text]:focus,
+input[type=date]:focus,
+textarea:focus {
+	background: beige;
+}
+
+button {
+	background: lightgrey;
+	border-radius: 10px;
+	padding: 8px;
+	transition: background .2s;
+}
+
+button:hover {
+	background: darkgray;
+}
+
+textarea {
+	width: 300px;
+	height: 200px;
+	border-radius: 5px;
+	box-shadow: inset 1px 2px 2px gray;
+	margin: 5px 0px 5px 0px;
+}
+
+.task-detail {
+	position: fixed;
+	top: 65px;
+	right: 120px;
+	background: palegoldenrod;
+	z-index: 2;
+	padding: 5px;
+	border-radius: 8px;
+	display: none;
+}
+
+.action-details,
+.action-delete {
+	color: lightslategray;
+	float: right;
+}
+
+.action-details:hover,
+.action-delete:hover {
+	color: red;
+}
+
+.content {
+	background: transparent;
+	border: 0;
+	width: 90%;
+}
+
+.op {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: black;
+	opacity: 0.3;
+	display: none;
+	z-index: 1;
+}
+
+.checked {
+	color: darkgray;
+	opacity: 0.8;
+}
+
+.checked:after {
+	content: '';
+	width: 85%;
+	height: 2px;
+	background: black;
+	display: block;
+	/*这个不要忘记*/
+	position: relative;
+	top: -10px;
+	left: 20px;
+	opacity: 0.5;
+}
+
+.msg {
+	width: 30%;
+	height: 80px;
+	background: lightgoldenrodyellow;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 500;
+	font-size: 16px;
+	border-radius: 5px;
+	box-shadow: 4px 3px 10px 6px lightpink;
+	display: none;
+}
+
+.msg_content {
+	position: relative;
+	top: 30px;
+}
+
+.know {
+	display: inline-block;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+	position: relative;
+	top: 50px;
+	left: 130px;
+	font-family: STCaiyun;
+	font-weight: 600;
+}
+
+.know:hover {
+	font-size: 20px;
+	color: red;
+	transform: rotate(8deg);
+}
+
+.lb {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 330px;
+	top: 70px;
+	cursor: pointer;
+}
+
+.red_line {
+	width: 42px;
+	height: 42px;
+	background: transparent;
+	border: 3px solid;
+	position: absolute;
+	right: 340px;
+	top: 50px;
+	border-color: transparent white transparent transparent;
+	transform: rotate(45deg);
+	display: block;
+	cursor: pointer;
+}
+
+.del {
+	background: #EEE8AA;
+	width: 250px;
+	height: 150px;
+	position: fixed;
+	top: 33%;
+	left: 38%;
+	border-radius: 10px;
+	border: 7px solid gray;
+	display: none;
+}
+
+.del span {
+	display: block;
+	font-family: STCaiyun;
+	font-size: 30px;
+	font-weight: 900;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.del button {
+	width: 60px;
+	margin: 20px 25px 0 30px;
+}
